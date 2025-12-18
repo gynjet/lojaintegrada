@@ -175,30 +175,38 @@
    ============================================ */
 #rodape {
     background: linear-gradient(135deg, #1a237e 0%, #0d1442 100%) !important;
-    color: var(--cor-branco) !important;
+    color: #ffffff !important;
     padding: 60px 0 30px !important;
     margin-top: 60px !important;
 }
 
 #rodape .conteudo {
-    color: var(--cor-branco) !important;
+    color: #ffffff !important;
+}
+
+#rodape * {
+    color: #ffffff !important;
 }
 
 #rodape a {
-    color: rgba(255, 255, 255, 0.8) !important;
-    transition: var(--transicao) !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
 }
 
 #rodape a:hover {
-    color: var(--cor-destaque) !important;
+    color: #e91e63 !important;
+    text-decoration: underline !important;
 }
 
 #rodape .titulo,
 #rodape h3,
-#rodape h4 {
-    color: var(--cor-branco) !important;
+#rodape h4,
+#rodape h5 {
+    color: #ffffff !important;
     margin-bottom: 20px !important;
     font-size: 1.1rem !important;
+    font-weight: 700 !important;
     position: relative !important;
     padding-bottom: 10px !important;
 }
@@ -210,21 +218,29 @@
     left: 0 !important;
     width: 40px !important;
     height: 2px !important;
-    background: var(--cor-destaque) !important;
+    background: #e91e63 !important;
 }
 
 #rodape p,
 #rodape span,
-#rodape li {
-    color: rgba(255, 255, 255, 0.85) !important;
+#rodape li,
+#rodape div {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+#rodape ul li {
+    color: #ffffff !important;
+    margin-bottom: 8px !important;
 }
 
 #rodape .copyright,
 #rodape .desenvolvido {
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
     margin-top: 40px !important;
     padding-top: 20px !important;
-    opacity: 0.7 !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
 }
 
 /* ============================================
