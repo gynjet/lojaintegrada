@@ -1,0 +1,476 @@
+/*
+ * ============================================
+ * PRINTER DIGITAL - CSS PERSONALIZADO
+ * Loja Integrada - Melhorias de Layout
+ * ============================================
+ * Repositório: github.com/gynjet/lojaintegrada
+ * Data: Dezembro 2024
+ * ============================================
+ */
+
+/* ============================================
+   VARIÁVEIS DE CORES (Paleta Unificada)
+   ============================================ */
+:root {
+  --cor-primaria: #1a237e;       /* Azul Marinho */
+  --cor-destaque: #e91e63;       /* Magenta (Logo GYNJET) */
+  --cor-ciano: #00bcd4;          /* Ciano do logo */
+  --cor-amarelo: #ffc107;        /* Amarelo do logo */
+  --cor-texto: #333333;
+  --cor-texto-claro: #666666;
+  --cor-fundo: #f5f5f5;
+  --cor-branco: #ffffff;
+  --sombra-suave: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --sombra-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --transicao: all 0.3s ease;
+}
+
+/* ============================================
+   TIPOGRAFIA MELHORADA
+   ============================================ */
+body {
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--cor-texto);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   HEADER / CABEÇALHO
+   ============================================ */
+header,
+.header,
+#header {
+  box-shadow: var(--sombra-suave);
+  position: relative;
+  z-index: 1000;
+}
+
+/* Menu de navegação */
+.menu-principal a,
+nav a,
+.nav-link {
+  transition: var(--transicao);
+  position: relative;
+}
+
+.menu-principal a:hover,
+nav a:hover,
+.nav-link:hover {
+  color: var(--cor-destaque) !important;
+}
+
+/* Efeito underline animado no menu */
+.menu-principal a::after,
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--cor-destaque);
+  transition: width 0.3s ease;
+}
+
+.menu-principal a:hover::after,
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   BANNERS / HERO SECTION
+   ============================================ */
+.banner,
+.carousel,
+.slider,
+.hero {
+  margin-bottom: 60px;
+}
+
+.banner img,
+.carousel img {
+  border-radius: 8px;
+}
+
+/* ============================================
+   ESPAÇAMENTO ENTRE SEÇÕES
+   ============================================ */
+section,
+.secao,
+.bloco,
+.vitrine,
+.produtos-destaque {
+  padding: 60px 0;
+  margin-bottom: 20px;
+}
+
+/* Títulos das seções */
+.titulo-secao,
+.section-title,
+h2.titulo {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.titulo-secao::after,
+.section-title::after,
+h2.titulo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cor-ciano), var(--cor-destaque));
+  border-radius: 2px;
+}
+
+/* ============================================
+   CARDS DE PRODUTOS
+   ============================================ */
+.produto,
+.product,
+.card-produto,
+.produto-item {
+  background: var(--cor-branco);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transicao);
+  box-shadow: var(--sombra-suave);
+  position: relative;
+}
+
+.produto:hover,
+.product:hover,
+.card-produto:hover,
+.produto-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--sombra-hover);
+}
+
+/* Imagem do produto */
+.produto img,
+.product img,
+.card-produto img {
+  transition: transform 0.4s ease;
+}
+
+.produto:hover img,
+.product:hover img,
+.card-produto:hover img {
+  transform: scale(1.05);
+}
+
+/* Nome do produto */
+.produto-nome,
+.product-name,
+.nome-produto {
+  font-weight: 600;
+  color: var(--cor-primaria);
+  transition: var(--transicao);
+}
+
+.produto:hover .produto-nome,
+.product:hover .product-name {
+  color: var(--cor-destaque);
+}
+
+/* Preço */
+.preco,
+.price,
+.produto-preco {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cor-destaque);
+}
+
+.preco-antigo,
+.old-price {
+  text-decoration: line-through;
+  color: var(--cor-texto-claro);
+  font-size: 0.9rem;
+}
+
+/* Desconto badge */
+.desconto,
+.badge-desconto,
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--cor-destaque);
+  color: var(--cor-branco);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* ============================================
+   BOTÕES DE CONVERSÃO (CTAs)
+   ============================================ */
+.btn,
+.botao,
+button,
+.btn-comprar,
+.add-to-cart,
+input[type="submit"] {
+  background: linear-gradient(135deg, var(--cor-destaque), #c2185b);
+  color: var(--cor-branco) !important;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transicao);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+}
+
+.btn:hover,
+.botao:hover,
+button:hover,
+.btn-comprar:hover,
+.add-to-cart:hover,
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+  background: linear-gradient(135deg, #c2185b, var(--cor-destaque));
+}
+
+/* Botão secundário */
+.btn-secundario,
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--cor-primaria);
+  color: var(--cor-primaria) !important;
+}
+
+.btn-secundario:hover,
+.btn-outline:hover {
+  background: var(--cor-primaria);
+  color: var(--cor-branco) !important;
+}
+
+/* ============================================
+   BARRA DE BUSCA
+   ============================================ */
+.busca,
+.search,
+input[type="search"],
+.campo-busca {
+  border-radius: 25px;
+  border: 2px solid #e0e0e0;
+  padding: 12px 20px;
+  transition: var(--transicao);
+}
+
+.busca:focus,
+.search:focus,
+input[type="search"]:focus {
+  border-color: var(--cor-destaque);
+  box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+  outline: none;
+}
+
+/* ============================================
+   FOOTER / RODAPÉ
+   ============================================ */
+footer,
+.footer,
+#footer {
+  background: linear-gradient(135deg, #1a237e 0%, #0d1442 100%);
+  color: var(--cor-branco);
+  padding: 60px 0 30px;
+  margin-top: 60px;
+}
+
+footer a,
+.footer a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: var(--transicao);
+}
+
+footer a:hover,
+.footer a:hover {
+  color: var(--cor-destaque);
+}
+
+/* Títulos do footer */
+footer h3,
+footer h4,
+.footer h3,
+.footer h4 {
+  color: var(--cor-branco);
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+footer h3::after,
+footer h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--cor-destaque);
+}
+
+/* Copyright */
+.copyright,
+.rodape-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* ============================================
+   WHATSAPP BUTTON (Melhorado)
+   ============================================ */
+.whatsapp-button,
+.btn-whatsapp,
+[class*="whatsapp"] {
+  transition: var(--transicao);
+}
+
+.whatsapp-button:hover,
+.btn-whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   SELOS DE CONFIANÇA
+   ============================================ */
+.selos,
+.trust-badges,
+.seguranca {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+
+.selos img,
+.trust-badges img {
+  transition: var(--transicao);
+  opacity: 0.8;
+}
+
+.selos img:hover,
+.trust-badges img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 768px) {
+  section,
+  .secao,
+  .bloco {
+    padding: 40px 15px;
+  }
+  
+  .produto:hover {
+    transform: translateY(-4px);
+  }
+  
+  .btn,
+  .botao,
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  footer {
+    padding: 40px 15px 20px;
+  }
+}
+
+/* ============================================
+   ANIMAÇÕES SUAVES
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.produto,
+.product,
+.card-produto {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Delay para produtos em sequência */
+.produto:nth-child(1) { animation-delay: 0.1s; }
+.produto:nth-child(2) { animation-delay: 0.2s; }
+.produto:nth-child(3) { animation-delay: 0.3s; }
+.produto:nth-child(4) { animation-delay: 0.4s; }
+
+/* ============================================
+   MELHORIAS EXTRAS
+   ============================================ */
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Seleção de texto com cor da marca */
+::selection {
+  background: var(--cor-destaque);
+  color: var(--cor-branco);
+}
+
+/* Links gerais */
+a {
+  color: var(--cor-primaria);
+  transition: var(--transicao);
+}
+
+a:hover {
+  color: var(--cor-destaque);
+}
+
+/* Inputs e formulários */
+input,
+textarea,
+select {
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  padding: 12px 15px;
+  transition: var(--transicao);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--cor-destaque);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+}
