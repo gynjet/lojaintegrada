@@ -1,0 +1,346 @@
+/*
+ * ============================================
+ * PRINTER DIGITAL - CSS LOJA INTEGRADA
+ * Versão otimizada com seletores específicos
+ * ============================================
+ * Repositório: github.com/gynjet/lojaintegrada
+ * Data: Dezembro 2024
+ * ============================================
+ */
+
+/* ============================================
+   VARIÁVEIS DE CORES (Paleta GYNJET)
+   ============================================ */
+:root {
+    --cor-primaria: #1a237e;
+    --cor-destaque: #e91e63;
+    --cor-ciano: #00bcd4;
+    --cor-amarelo: #ffc107;
+    --cor-texto: #333333;
+    --cor-branco: #ffffff;
+    --sombra-suave: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --sombra-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --transicao: all 0.3s ease;
+}
+
+/* ============================================
+   HEADER - #cabecalho
+   ============================================ */
+#cabecalho {
+    box-shadow: var(--sombra-suave) !important;
+    position: relative;
+    z-index: 1000;
+}
+
+/* ============================================
+   MENU - .menu.superior
+   ============================================ */
+.menu.superior .titulo {
+    transition: var(--transicao) !important;
+    position: relative;
+}
+
+.menu.superior .titulo:hover {
+    color: var(--cor-destaque) !important;
+}
+
+.menu.superior .nivel-um>li>a:hover {
+    color: var(--cor-destaque) !important;
+}
+
+/* ============================================
+   BARRA DE BUSCA
+   ============================================ */
+#auto-complete,
+.ui-autocomplete-input {
+    border-radius: 25px !important;
+    border: 2px solid #e0e0e0 !important;
+    padding: 12px 20px !important;
+    transition: var(--transicao) !important;
+}
+
+#auto-complete:focus,
+.ui-autocomplete-input:focus {
+    border-color: var(--cor-destaque) !important;
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1) !important;
+    outline: none !important;
+}
+
+.botao-busca {
+    background: linear-gradient(135deg, var(--cor-destaque), #c2185b) !important;
+    border-radius: 0 25px 25px 0 !important;
+    transition: var(--transicao) !important;
+}
+
+.botao-busca:hover {
+    background: linear-gradient(135deg, #c2185b, var(--cor-destaque)) !important;
+}
+
+/* ============================================
+   CARDS DE PRODUTOS - .listagem-item
+   ============================================ */
+.listagem-item {
+    background: var(--cor-branco) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    transition: var(--transicao) !important;
+    box-shadow: var(--sombra-suave) !important;
+    position: relative !important;
+}
+
+.listagem-item:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: var(--sombra-hover) !important;
+}
+
+.listagem-item .imagem-produto img {
+    transition: transform 0.4s ease !important;
+}
+
+.listagem-item:hover .imagem-produto img {
+    transform: scale(1.05) !important;
+}
+
+.listagem-item .nome-produto,
+.listagem-item .info-produto .nome {
+    font-weight: 600 !important;
+    transition: var(--transicao) !important;
+}
+
+.listagem-item:hover .nome-produto,
+.listagem-item:hover .info-produto .nome {
+    color: var(--cor-destaque) !important;
+}
+
+/* ============================================
+   PREÇOS
+   ============================================ */
+.preco-produto .preco-promocional,
+.preco-produto .por {
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: var(--cor-destaque) !important;
+}
+
+.preco-produto .preco-venda,
+.preco-produto .de {
+    text-decoration: line-through !important;
+    color: #999 !important;
+    font-size: 0.9rem !important;
+}
+
+.destaque-parcela {
+    color: var(--cor-primaria) !important;
+    font-weight: 600 !important;
+}
+
+/* ============================================
+   BOTÕES - .botao
+   ============================================ */
+.botao.principal,
+.botao-comprar,
+.acoes-produto .botao {
+    background: linear-gradient(135deg, var(--cor-destaque), #c2185b) !important;
+    color: var(--cor-branco) !important;
+    border: none !important;
+    padding: 12px 28px !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: var(--transicao) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3) !important;
+}
+
+.botao.principal:hover,
+.botao-comprar:hover,
+.acoes-produto .botao:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4) !important;
+    background: linear-gradient(135deg, #c2185b, var(--cor-destaque)) !important;
+}
+
+/* Botão adicionar ao carrinho */
+.btn-adicionar-carrinho,
+.adicionar-carrinho {
+    background: linear-gradient(135deg, var(--cor-destaque), #c2185b) !important;
+    color: var(--cor-branco) !important;
+    border-radius: 25px !important;
+    transition: var(--transicao) !important;
+}
+
+/* ============================================
+   FOOTER - #rodape
+   ============================================ */
+#rodape {
+    background: linear-gradient(135deg, #1a237e 0%, #0d1442 100%) !important;
+    color: var(--cor-branco) !important;
+    padding: 60px 0 30px !important;
+    margin-top: 60px !important;
+}
+
+#rodape .conteudo {
+    color: var(--cor-branco) !important;
+}
+
+#rodape a {
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: var(--transicao) !important;
+}
+
+#rodape a:hover {
+    color: var(--cor-destaque) !important;
+}
+
+#rodape .titulo,
+#rodape h3,
+#rodape h4 {
+    color: var(--cor-branco) !important;
+    margin-bottom: 20px !important;
+    font-size: 1.1rem !important;
+    position: relative !important;
+    padding-bottom: 10px !important;
+}
+
+#rodape .titulo::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 40px !important;
+    height: 2px !important;
+    background: var(--cor-destaque) !important;
+}
+
+#rodape p,
+#rodape span,
+#rodape li {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+#rodape .copyright,
+#rodape .desenvolvido {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin-top: 40px !important;
+    padding-top: 20px !important;
+    opacity: 0.7 !important;
+}
+
+/* ============================================
+   VITRINE / SEÇÕES
+   ============================================ */
+.vitrine,
+.secao-produtos,
+.produtos-destaque {
+    padding: 60px 0 !important;
+    margin-bottom: 20px !important;
+}
+
+.vitrine .titulo,
+.secao-produtos .titulo {
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    font-size: 1.8rem !important;
+    color: var(--cor-primaria) !important;
+}
+
+/* ============================================
+   SELOS E BADGES
+   ============================================ */
+.selo-desconto,
+.tag-promocao {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    background: var(--cor-destaque) !important;
+    color: var(--cor-branco) !important;
+    padding: 5px 12px !important;
+    border-radius: 20px !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+}
+
+/* ============================================
+   WHATSAPP BUTTON
+   ============================================ */
+[class*="whatsapp"],
+.whatsapp-button,
+.btn-whatsapp {
+    transition: var(--transicao) !important;
+}
+
+[class*="whatsapp"]:hover {
+    transform: scale(1.1) !important;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 768px) {
+    .listagem-item:hover {
+        transform: translateY(-4px) !important;
+    }
+
+    .botao.principal,
+    .botao-comprar {
+        padding: 10px 20px !important;
+        font-size: 0.9rem !important;
+    }
+
+    #rodape {
+        padding: 40px 15px 20px !important;
+    }
+}
+
+/* ============================================
+   ANIMAÇÕES
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.listagem-item {
+    animation: fadeInUp 0.5s ease forwards !important;
+}
+
+.listagem-item:nth-child(1) {
+    animation-delay: 0.1s !important;
+}
+
+.listagem-item:nth-child(2) {
+    animation-delay: 0.2s !important;
+}
+
+.listagem-item:nth-child(3) {
+    animation-delay: 0.3s !important;
+}
+
+.listagem-item:nth-child(4) {
+    animation-delay: 0.4s !important;
+}
+
+/* ============================================
+   MELHORIAS GERAIS
+   ============================================ */
+html {
+    scroll-behavior: smooth !important;
+}
+
+::selection {
+    background: var(--cor-destaque) !important;
+    color: var(--cor-branco) !important;
+}
+
+/* Cor secundária da plataforma */
+.cor-secundaria {
+    color: var(--cor-destaque) !important;
+}
