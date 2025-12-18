@@ -1,0 +1,554 @@
+/*
+ * ============================================
+ * PRINTER DIGITAL - ESTILO GRAND STORE
+ * CSS aproximado do tema Grand Store
+ * ============================================
+ * Repositório: github.com/gynjet/lojaintegrada
+ * Data: Dezembro 2024
+ * ============================================
+ */
+
+/* ============================================
+   VARIÁVEIS DE CORES (Paleta Grand Store)
+   ============================================ */
+:root {
+    --roxo-primario: #6A1B9A;
+    --roxo-escuro: #4A148C;
+    --rosa-destaque: #E91E63;
+    --rosa-claro: #F48FB1;
+    --branco: #ffffff;
+    --cinza-claro: #f5f5f5;
+    --cinza-texto: #333333;
+    --sombra: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --sombra-hover: 0 8px 25px rgba(106, 27, 154, 0.2);
+    --transicao: all 0.3s ease;
+    --border-radius: 12px;
+}
+
+/* ============================================
+   RESET E BASE
+   ============================================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Segoe UI', sans-serif !important;
+    background-color: var(--cinza-claro) !important;
+    color: var(--cinza-texto) !important;
+}
+
+/* ============================================
+   HEADER - #cabecalho
+   ============================================ */
+#cabecalho {
+    background: var(--branco) !important;
+    box-shadow: var(--sombra) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+}
+
+#cabecalho .conteudo-topo {
+    background: var(--branco) !important;
+}
+
+/* ============================================
+   MENU PRINCIPAL - Barra Roxa
+   ============================================ */
+.menu.superior,
+.barra-menu,
+.navegacao-principal,
+#menu-principal {
+    background: linear-gradient(135deg, var(--roxo-primario), var(--roxo-escuro)) !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+
+.menu.superior .titulo,
+.menu.superior a,
+.barra-menu a,
+.navegacao-principal a {
+    color: var(--branco) !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.5px !important;
+    transition: var(--transicao) !important;
+}
+
+.menu.superior .titulo:hover,
+.menu.superior a:hover,
+.barra-menu a:hover {
+    color: var(--rosa-claro) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.menu.superior .nivel-um>li {
+    border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ============================================
+   BARRA DE BUSCA
+   ============================================ */
+#auto-complete,
+.ui-autocomplete-input,
+.campo-busca input {
+    border-radius: 25px !important;
+    border: 2px solid #e0e0e0 !important;
+    padding: 12px 20px !important;
+    transition: var(--transicao) !important;
+    font-size: 0.95rem !important;
+}
+
+#auto-complete:focus,
+.ui-autocomplete-input:focus {
+    border-color: var(--roxo-primario) !important;
+    box-shadow: 0 0 0 3px rgba(106, 27, 154, 0.15) !important;
+    outline: none !important;
+}
+
+.botao-busca {
+    background: linear-gradient(135deg, var(--roxo-primario), var(--roxo-escuro)) !important;
+    border-radius: 0 25px 25px 0 !important;
+    transition: var(--transicao) !important;
+    color: var(--branco) !important;
+}
+
+.botao-busca:hover {
+    background: linear-gradient(135deg, var(--rosa-destaque), #C2185B) !important;
+}
+
+/* ============================================
+   CARRINHO E ÍCONES
+   ============================================ */
+.carrinho-topo,
+.carrinho-header,
+.icone-carrinho {
+    color: var(--roxo-primario) !important;
+}
+
+.carrinho-topo:hover,
+.icone-carrinho:hover {
+    color: var(--rosa-destaque) !important;
+}
+
+.quantidade-carrinho,
+.badge-carrinho {
+    background: var(--rosa-destaque) !important;
+    color: var(--branco) !important;
+    border-radius: 50% !important;
+    font-weight: 700 !important;
+}
+
+/* ============================================
+   BANNERS E VITRINES
+   ============================================ */
+.banner-principal,
+.vitrine-banners,
+.banner-topo {
+    border-radius: var(--border-radius) !important;
+    overflow: hidden !important;
+    margin-bottom: 30px !important;
+}
+
+.vitrine,
+.secao-produtos,
+.produtos-destaque {
+    background: var(--branco) !important;
+    border-radius: var(--border-radius) !important;
+    padding: 40px 30px !important;
+    margin-bottom: 30px !important;
+    box-shadow: var(--sombra) !important;
+}
+
+.vitrine .titulo,
+.secao-produtos .titulo {
+    text-align: center !important;
+    margin-bottom: 30px !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: var(--roxo-primario) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* ============================================
+   CARDS DE PRODUTOS
+   ============================================ */
+.listagem-item {
+    background: var(--branco) !important;
+    border-radius: var(--border-radius) !important;
+    overflow: hidden !important;
+    transition: var(--transicao) !important;
+    box-shadow: var(--sombra) !important;
+    position: relative !important;
+    border: 1px solid #eee !important;
+}
+
+.listagem-item:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: var(--sombra-hover) !important;
+    border-color: var(--roxo-primario) !important;
+}
+
+.listagem-item .imagem-produto {
+    overflow: hidden !important;
+    border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+}
+
+.listagem-item .imagem-produto img {
+    transition: transform 0.4s ease !important;
+    width: 100% !important;
+}
+
+.listagem-item:hover .imagem-produto img {
+    transform: scale(1.08) !important;
+}
+
+.listagem-item .nome-produto,
+.listagem-item .info-produto .nome {
+    font-weight: 600 !important;
+    color: var(--cinza-texto) !important;
+    font-size: 0.95rem !important;
+    transition: var(--transicao) !important;
+    padding: 10px !important;
+}
+
+.listagem-item:hover .nome-produto,
+.listagem-item:hover .info-produto .nome {
+    color: var(--roxo-primario) !important;
+}
+
+/* ============================================
+   SELOS E BADGES DE DESCONTO
+   ============================================ */
+.selo-desconto,
+.tag-promocao,
+.desconto-percentual {
+    position: absolute !important;
+    top: 10px !important;
+    left: 10px !important;
+    background: var(--rosa-destaque) !important;
+    color: var(--branco) !important;
+    padding: 8px 12px !important;
+    border-radius: 20px !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    z-index: 10 !important;
+}
+
+.selo-novo,
+.tag-novo {
+    background: var(--roxo-primario) !important;
+}
+
+/* ============================================
+   PREÇOS
+   ============================================ */
+.preco-produto {
+    padding: 10px !important;
+}
+
+.preco-produto .preco-promocional,
+.preco-produto .por {
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    color: var(--rosa-destaque) !important;
+}
+
+.preco-produto .preco-venda,
+.preco-produto .de {
+    text-decoration: line-through !important;
+    color: #999 !important;
+    font-size: 0.85rem !important;
+}
+
+.destaque-parcela {
+    color: var(--roxo-primario) !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+}
+
+/* ============================================
+   BOTÕES - Estilo Grand Store
+   ============================================ */
+.botao.principal,
+.botao-comprar,
+.acoes-produto .botao,
+.btn-comprar {
+    background: linear-gradient(135deg, var(--rosa-destaque), #C2185B) !important;
+    color: var(--branco) !important;
+    border: none !important;
+    padding: 12px 25px !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: var(--transicao) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    font-size: 0.85rem !important;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3) !important;
+}
+
+.botao.principal:hover,
+.botao-comprar:hover,
+.acoes-produto .botao:hover,
+.btn-comprar:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4) !important;
+    background: linear-gradient(135deg, #C2185B, var(--rosa-destaque)) !important;
+}
+
+/* Botão secundário (roxo) */
+.botao.secundario,
+.btn-detalhes {
+    background: linear-gradient(135deg, var(--roxo-primario), var(--roxo-escuro)) !important;
+    color: var(--branco) !important;
+    border-radius: 25px !important;
+    box-shadow: 0 4px 15px rgba(106, 27, 154, 0.3) !important;
+}
+
+.botao.secundario:hover,
+.btn-detalhes:hover {
+    box-shadow: 0 6px 20px rgba(106, 27, 154, 0.4) !important;
+}
+
+/* ============================================
+   FOOTER - Estilo Claro
+   ============================================ */
+#rodape {
+    background: var(--cinza-claro) !important;
+    color: var(--cinza-texto) !important;
+    padding: 60px 0 30px !important;
+    margin-top: 60px !important;
+    border-top: 3px solid var(--roxo-primario) !important;
+}
+
+#rodape .conteudo {
+    color: var(--cinza-texto) !important;
+}
+
+#rodape * {
+    color: var(--cinza-texto) !important;
+}
+
+#rodape a {
+    color: var(--roxo-primario) !important;
+    transition: var(--transicao) !important;
+}
+
+#rodape a:hover {
+    color: var(--rosa-destaque) !important;
+}
+
+#rodape .titulo,
+#rodape h3,
+#rodape h4,
+#rodape h5 {
+    color: var(--roxo-primario) !important;
+    margin-bottom: 20px !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+#rodape p,
+#rodape span,
+#rodape li {
+    color: #666 !important;
+    line-height: 1.8 !important;
+}
+
+#rodape .copyright,
+#rodape .desenvolvido {
+    border-top: 1px solid #ddd !important;
+    margin-top: 40px !important;
+    padding-top: 20px !important;
+    text-align: center !important;
+}
+
+/* ============================================
+   NEWSLETTER
+   ============================================ */
+.newsletter,
+.form-newsletter {
+    background: var(--roxo-primario) !important;
+    border-radius: var(--border-radius) !important;
+    padding: 30px !important;
+    margin: 30px 0 !important;
+}
+
+.newsletter input[type="email"],
+.newsletter input[type="text"] {
+    border-radius: 25px !important;
+    border: none !important;
+    padding: 15px 20px !important;
+}
+
+.newsletter button,
+.newsletter .botao {
+    background: var(--rosa-destaque) !important;
+    border-radius: 25px !important;
+}
+
+/* ============================================
+   BREADCRUMB
+   ============================================ */
+.breadcrumb,
+.migalha-pao {
+    background: var(--branco) !important;
+    padding: 15px 20px !important;
+    border-radius: var(--border-radius) !important;
+    margin-bottom: 20px !important;
+    font-size: 0.85rem !important;
+}
+
+.breadcrumb a,
+.migalha-pao a {
+    color: var(--roxo-primario) !important;
+}
+
+/* ============================================
+   PÁGINA DE PRODUTO
+   ============================================ */
+.produto-detalhe,
+.pagina-produto {
+    background: var(--branco) !important;
+    border-radius: var(--border-radius) !important;
+    padding: 30px !important;
+    box-shadow: var(--sombra) !important;
+}
+
+.produto-detalhe .preco-promocional {
+    font-size: 2rem !important;
+    color: var(--rosa-destaque) !important;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 768px) {
+    .listagem-item:hover {
+        transform: translateY(-4px) !important;
+    }
+
+    .botao.principal,
+    .botao-comprar {
+        padding: 10px 18px !important;
+        font-size: 0.8rem !important;
+    }
+
+    #rodape {
+        padding: 40px 15px 20px !important;
+    }
+
+    .vitrine,
+    .secao-produtos {
+        padding: 25px 15px !important;
+    }
+}
+
+/* ============================================
+   ANIMAÇÕES
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.listagem-item {
+    animation: fadeInUp 0.5s ease forwards !important;
+}
+
+.listagem-item:nth-child(1) {
+    animation-delay: 0.05s !important;
+}
+
+.listagem-item:nth-child(2) {
+    animation-delay: 0.1s !important;
+}
+
+.listagem-item:nth-child(3) {
+    animation-delay: 0.15s !important;
+}
+
+.listagem-item:nth-child(4) {
+    animation-delay: 0.2s !important;
+}
+
+.listagem-item:nth-child(5) {
+    animation-delay: 0.25s !important;
+}
+
+.listagem-item:nth-child(6) {
+    animation-delay: 0.3s !important;
+}
+
+.selo-desconto {
+    animation: pulse 2s ease-in-out infinite !important;
+}
+
+/* ============================================
+   MELHORIAS GERAIS
+   ============================================ */
+html {
+    scroll-behavior: smooth !important;
+}
+
+::selection {
+    background: var(--roxo-primario) !important;
+    color: var(--branco) !important;
+}
+
+/* WhatsApp Button */
+[class*="whatsapp"],
+.whatsapp-button,
+.btn-whatsapp {
+    transition: var(--transicao) !important;
+    border-radius: 50% !important;
+    box-shadow: var(--sombra-hover) !important;
+}
+
+[class*="whatsapp"]:hover {
+    transform: scale(1.15) !important;
+}
+
+/* Links gerais */
+a {
+    transition: var(--transicao) !important;
+}
+
+/* Cor secundária da plataforma */
+.cor-secundaria {
+    color: var(--rosa-destaque) !important;
+}
+
+.fundo-primario {
+    background: var(--roxo-primario) !important;
+}
+
+.fundo-secundario {
+    background: var(--rosa-destaque) !important;
+}
